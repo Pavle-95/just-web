@@ -1,0 +1,169 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../img/bg-patterns.png");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 10%;
+}
+
+.container {
+  max-width: 1320px;
+  width: 90%;
+  height: auto;
+  margin: 0px auto;
+}
+
+.active {
+  position: relative;
+  z-index: 2;
+}
+.active::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  background-color: #FF867E;
+  bottom: 3px;
+}
+
+@font-face {
+  font-family: "Space Grotesk" format("truetype");
+  src: url("../fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf");
+  font-display: swap;
+}
+header {
+  margin-top: 45px !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo-icon img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+header .header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  border-radius: 6px;
+  border: 3px solid #000;
+  padding: 25px 32px;
+}
+header .header-nav .nav-link .link {
+  text-decoration: none;
+  color: #000;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.hero-section {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+.hero-section .hero-holder {
+  margin: 8% auto 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.hero-section .hero-holder h1 {
+  flex: 0 0 100%;
+  text-align: center;
+  color: #000;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.hero-section .hero-holder h1 span {
+  position: relative;
+}
+.hero-section .hero-holder h1 span::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 23px;
+  background-color: #FF867E;
+  bottom: 3px;
+}
+.hero-section .hero-holder h2 {
+  flex: 0 0 100%;
+  margin: 82px 0px 90px;
+  text-align: center;
+  color: #000;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.hero-section .hero-holder .btn-element {
+  position: relative;
+}
+.hero-section .hero-holder .btn-element .btn {
+  padding: 30px 55px;
+  border-radius: 92px;
+  border: 8px solid #000;
+  background: #91D1FF;
+  color: #000;
+  text-align: center;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 29px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+}
+.hero-section .hero-holder .btn-element .icon {
+  position: absolute;
+  right: -80px;
+  bottom: -95px;
+}
+.hero-section .background-elem-1 {
+  position: absolute;
+  bottom: -40px;
+  left: 0px;
+}
+.hero-section .background-elem-2 {
+  position: absolute;
+  bottom: 20px;
+  right: 0px;
+}
+
+.subhero-section {
+  width: 100%;
+  background-color: #000;
+}
+.subhero-section .subhero-holder {
+  overflow: hidden;
+  padding: 40px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 50px;
+}
+.subhero-section .subhero-holder h2 {
+  color: #FFF;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-wrap: nowrap;
+}/*# sourceMappingURL=style.css.map */

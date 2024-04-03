@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-  max-width: 1320px;
+  max-width: 90%;
   width: 90%;
   height: auto;
   margin: 0px auto;
@@ -38,6 +38,8 @@ body {
   font-display: swap;
 }
 header {
+  max-width: 1320px;
+  margin: 0px auto;
   margin-top: 45px !important;
   display: flex;
   justify-content: space-between;
@@ -154,7 +156,7 @@ header .header-nav .nav-link .link:hover::before {
 .hero-section .background-elem-1 {
   position: absolute;
   bottom: -40px;
-  left: 0px;
+  left: 45px;
 }
 .hero-section .background-elem-2 {
   position: absolute;
@@ -184,6 +186,135 @@ header .header-nav .nav-link .link:hover::before {
   display: block;
   max-width: 100%;
   animation: scroll 60s linear infinite;
+}
+
+.about-section {
+  padding: 45px 0px;
+}
+.about-section .about-holder {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.about-section .about-holder .about-header {
+  flex: 0 0 30%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.about-section .about-holder .about-header h2 {
+  margin-bottom: -50px;
+  margin-left: -30px;
+  position: relative;
+  color: #000;
+  -webkit-text-stroke-width: 3;
+  -webkit-text-stroke-color: #000;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-wrap: nowrap;
+}
+.about-section .about-holder .about-header h2::before {
+  display: block;
+  content: "";
+  background-image: url("../img/about/about-unerline.svg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 5px;
+  right: -45px;
+}
+.about-section .about-holder .about-content {
+  flex: 0 0 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.about-section .about-holder .about-content .about-text {
+  display: block;
+  position: relative;
+}
+.about-section .about-holder .about-content .about-text p {
+  color: #000;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.about-section .about-holder .about-content .about-text p span {
+  position: relative;
+}
+.about-section .about-holder .about-content .about-text p span::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 13px;
+  background-color: #FFDC58;
+  bottom: 3px;
+}
+.about-section .about-holder .about-content .about-text .ball-icon {
+  position: absolute;
+  right: 0px;
+  bottom: -80px;
+}
+.about-section .about-holder .about-content .about-qr {
+  margin: 100px 0px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 100px;
+}
+.about-section .about-holder .about-content .about-qr .qr-code {
+  border: 4px dashed black;
+}
+.about-section .about-holder .about-content .about-qr h3 {
+  color: #000;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 120px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.about-section .about-holder .about-content .about-qr .qr-arrow {
+  position: absolute;
+  left: -140px;
+  bottom: 50%;
+}
+.about-section .about-holder .about-content .about-qr .qr-circle {
+  position: absolute;
+  left: -85px;
+  bottom: -22%;
+  z-index: -1;
+  scale: 0.9;
+}
+.about-section .about-holder .about-content .about-btn {
+  position: relative;
+}
+.about-section .about-holder .about-content .about-btn .btn {
+  padding: 30px 55px;
+  border-radius: 92px;
+  border: 8px solid #000;
+  background: #91D1FF;
+  color: #000;
+  text-align: center;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 29px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+}
+.about-section .about-holder .about-content .about-btn .icon {
+  position: absolute;
+  right: -80px;
+  bottom: -95px;
 }
 
 @keyframes scroll {

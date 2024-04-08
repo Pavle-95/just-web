@@ -135,6 +135,7 @@ header .header-nav .nav-link .link:hover::before {
   position: relative;
 }
 .hero-section .hero-holder .btn-element .btn {
+  display: block;
   padding: 30px 55px;
   border-radius: 92px;
   border: 8px solid #000;
@@ -151,7 +152,7 @@ header .header-nav .nav-link .link:hover::before {
 .hero-section .hero-holder .btn-element .icon {
   position: absolute;
   right: -80px;
-  bottom: -95px;
+  bottom: -40px;
 }
 .hero-section .background-elem-1 {
   position: absolute;
@@ -189,15 +190,9 @@ header .header-nav .nav-link .link:hover::before {
 }
 
 .about-section {
-  padding: 45px 0px;
-}
-.about-section .about-holder {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  padding: 80px 0px;
 }
 .about-section .about-holder .about-header {
-  flex: 0 0 30%;
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
@@ -229,9 +224,11 @@ header .header-nav .nav-link .link:hover::before {
   right: -45px;
 }
 .about-section .about-holder .about-content {
-  flex: 0 0 50%;
+  max-width: 1500px;
+  margin: 150px auto 0px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
 }
 .about-section .about-holder .about-content .about-text {
   display: block;
@@ -298,6 +295,7 @@ header .header-nav .nav-link .link:hover::before {
   position: relative;
 }
 .about-section .about-holder .about-content .about-btn .btn {
+  display: block;
   padding: 30px 55px;
   border-radius: 92px;
   border: 8px solid #000;
@@ -314,16 +312,13 @@ header .header-nav .nav-link .link:hover::before {
 .about-section .about-holder .about-content .about-btn .icon {
   position: absolute;
   right: -80px;
-  bottom: -95px;
+  bottom: -40px;
 }
 
-.what-we-do-section .what-we-do-holder {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 150px;
+.what-we-do-section {
+  padding: 80px 0px;
 }
 .what-we-do-section .what-we-do-holder .what-we-do-header {
-  flex: 0 0 30%;
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
@@ -356,12 +351,13 @@ header .header-nav .nav-link .link:hover::before {
 }
 .what-we-do-section .what-we-do-holder .what-we-do-content {
   position: relative;
-  margin: 0px auto;
+  margin: 150px auto 0px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .what-we-do-section .what-we-do-holder .what-we-do-content .content-to-change {
+  position: relative;
   max-width: 1500px;
   background-image: url("../img/what-we-do/what-we-do-content-border.svg");
   background-position: center;
@@ -414,17 +410,14 @@ header .header-nav .nav-link .link:hover::before {
 .what-we-do-section .what-we-do-holder .what-we-do-content .purple-ball-icon {
   position: absolute;
   top: -75px;
-  left: calc(0% + 185px);
+  left: calc(0% + 60px);
   animation: roll 10s ease infinite;
 }
 
-.portfolio-section .portfolio-holder {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 100px;
+.portfolio-section {
+  padding: 150px 0px 90px;
 }
 .portfolio-section .portfolio-holder .portfolio-header {
-  flex: 0 0 30%;
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
@@ -456,7 +449,9 @@ header .header-nav .nav-link .link:hover::before {
   right: -85px;
 }
 .portfolio-section .portfolio-holder .portfolio-card-holder {
-  flex: 1 0 100%;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin: 130px auto 0px;
   overflow-x: scroll;
   padding: 30px;
   display: flex;
@@ -560,11 +555,19 @@ header .header-nav .nav-link .link:hover::before {
 .portfolio-section .portfolio-holder .portfolio-card-holder::-webkit-scrollbar-thumb:hover {
   background: #ffb958;
 }
-.portfolio-section .portfolio-holder .portfolio-btn {
+.portfolio-section .portfolio-holder .portfolio-btn-holder {
+  max-width: 1500px;
+  margin: 40px auto;
+}
+.portfolio-section .portfolio-holder .portfolio-btn-holder .portfolio-btn {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: block;
   margin-left: auto;
   position: relative;
 }
-.portfolio-section .portfolio-holder .portfolio-btn .btn {
+.portfolio-section .portfolio-holder .portfolio-btn-holder .portfolio-btn .btn {
+  display: block;
   padding: 30px 55px;
   border-radius: 92px;
   border: 8px solid #000;
@@ -578,19 +581,16 @@ header .header-nav .nav-link .link:hover::before {
   line-height: normal;
   text-decoration: none;
 }
-.portfolio-section .portfolio-holder .portfolio-btn .icon {
+.portfolio-section .portfolio-holder .portfolio-btn-holder .portfolio-btn .icon {
   position: absolute;
   right: -80px;
-  bottom: -95px;
+  bottom: -40px;
 }
 
-.clients-section .clients-holder {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 150px;
+.clients-section {
+  padding: 80px 0px;
 }
 .clients-section .clients-holder .clients-header {
-  flex: 0 0 30%;
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
@@ -622,6 +622,8 @@ header .header-nav .nav-link .link:hover::before {
   right: -165px;
 }
 .clients-section .clients-holder .clients-reviews-holder {
+  max-width: 1920px;
+  margin: 130px auto 0px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -629,6 +631,7 @@ header .header-nav .nav-link .link:hover::before {
   position: relative;
 }
 .clients-section .clients-holder .clients-reviews-holder .review-card {
+  max-width: 900px;
   flex: 0 0 50%;
   display: flex;
   flex-wrap: wrap;
@@ -705,6 +708,102 @@ header .header-nav .nav-link .link:hover::before {
   top: -45px;
 }
 
+.contact-us-section {
+  padding: 145px 0px;
+}
+.contact-us-section .contact-us-holder {
+  padding: 60px 20px;
+  position: relative;
+  margin: 0px auto;
+  max-width: 1470px;
+  border-radius: 2px;
+  border: 6px solid #000;
+  background: #FFF;
+  box-shadow: 21px 21px 0px 0px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contact-us-section .contact-us-holder h2 {
+  color: #000;
+  text-align: center;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.contact-us-section .contact-us-holder p {
+  max-width: 1100px;
+  margin: 35px auto 45px;
+  color: #000;
+  text-align: center;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.contact-us-section .contact-us-holder .contact-us-btn {
+  display: block;
+  position: relative;
+}
+.contact-us-section .contact-us-holder .contact-us-btn .btn {
+  display: block;
+  padding: 30px 55px;
+  border-radius: 92px;
+  border: 8px solid #000;
+  background: #91D1FF;
+  color: #000;
+  text-align: center;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 29px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+}
+.contact-us-section .contact-us-holder .contact-us-btn .icon {
+  position: absolute;
+  right: -80px;
+  bottom: -40px;
+}
+.contact-us-section .contact-us-holder .contact-us-element {
+  position: absolute;
+  top: -15%;
+  right: 100px;
+}
+
+footer {
+  padding: 35px 0px;
+  background: #000;
+}
+footer .footer-holder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .footer-holder .footer-logo img {
+  max-width: 200px;
+  height: auto;
+  display: block;
+}
+footer .footer-holder .footer-content p {
+  color: #FFF;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+footer .footer-holder .footer-social {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -716,14 +815,14 @@ header .header-nav .nav-link .link:hover::before {
 @keyframes roll {
   0% {
     transform: rotateZ(0deg);
-    left: calc(0% + 185px);
+    left: calc(0% + 60px);
   }
   50% {
     transform: rotateZ(780deg);
-    left: calc(100% - 278px);
+    left: calc(100% - 160px);
   }
   0% {
     transform: rotateZ(0deg);
-    left: calc(0% + 185px);
+    left: calc(0% + 60px);
   }
 }/*# sourceMappingURL=style.css.map */

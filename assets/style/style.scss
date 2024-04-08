@@ -49,6 +49,7 @@ body {
 @mixin btn-primary($background: $blue_primary){
     position: relative;
     .btn {
+        display: block;
         padding: 30px 55px;
         border-radius: 92px;
         border: 8px solid #000;
@@ -65,7 +66,7 @@ body {
     .icon {
         position: absolute;
         right: -80px;
-        bottom: -95px;
+        bottom: -40px;
     }
 };
 
@@ -212,13 +213,9 @@ header {
 
 // About Us Section
 .about-section {
-    padding: 45px 0px;
+    padding: 80px 0px;
     .about-holder {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
         .about-header {
-            flex: 0 0 30%;
             display: flex;
             align-items: flex-end;
             justify-content: flex-start;
@@ -250,9 +247,11 @@ header {
             }
         }
         .about-content {
-            flex: 0 0 50%;
+            max-width: 1500px;
+            margin: 150px auto 0px;
             display: flex;
-            flex-wrap: wrap;     
+            flex-direction: column;
+            align-items: center;
             .about-text {
                 display: block;
                 position: relative;
@@ -317,12 +316,9 @@ header {
 
 // What We Do Section
 .what-we-do-section {
+    padding: 80px 0px;
     .what-we-do-holder {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 150px;
         .what-we-do-header {
-            flex: 0 0 30%;
             display: flex;
             align-items: flex-end;
             justify-content: flex-start;
@@ -355,11 +351,12 @@ header {
         }
         .what-we-do-content {
             position: relative;
-            margin: 0px auto;
+            margin: 150px auto 0px;
             display: flex;
             align-items: center;
             justify-content: center;
             .content-to-change {
+                position: relative;
                 max-width: 1500px;
                 background-image: url('../img/what-we-do/what-we-do-content-border.svg');
                 background-position: center;
@@ -415,7 +412,7 @@ header {
             .purple-ball-icon {
                 position: absolute;
                 top: -75px;
-                left: calc(0% + 185px);
+                left: calc(0% + 60px);
                 animation: roll 10s ease infinite;
             }
         }
@@ -424,12 +421,9 @@ header {
 
 // Portfolio Section
 .portfolio-section {
+    padding: 150px 0px 90px;
     .portfolio-holder {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 100px;
         .portfolio-header {
-            flex: 0 0 30%;
             display: flex;
             align-items: flex-end;
             justify-content: flex-start;
@@ -461,7 +455,8 @@ header {
             } 
         } 
         .portfolio-card-holder {
-            flex: 1 0 100%;
+            max-width: fit-content;
+            margin: 130px auto 0px;
             overflow-x: scroll;
             padding: 30px;
             display: flex;
@@ -573,21 +568,24 @@ header {
                 background: #ffb958;
             }
         }  
-        .portfolio-btn {
-            margin-left: auto;
-            @include btn-primary($yellow_primary);
+        .portfolio-btn-holder {
+            max-width: 1500px;
+            margin: 40px auto;
+            .portfolio-btn {
+                width: fit-content;
+                display: block;
+                margin-left: auto;
+                @include btn-primary($yellow_primary);
+            }    
         }
     }
 }
 
 // Happy Clients Corner Section
 .clients-section {
+    padding: 80px 0px;
     .clients-holder {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 150px;
         .clients-header {
-            flex: 0 0 30%;
             display: flex;
             align-items: flex-end;
             justify-content: flex-start;
@@ -619,12 +617,15 @@ header {
             } 
         }
         .clients-reviews-holder {
+            max-width: 1920px;
+            margin: 130px auto 0px;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-wrap: wrap;
             position: relative;
             .review-card {
+                max-width: 900px;
                 flex: 0 0 50%;
                 display: flex;
                 flex-wrap: wrap;
@@ -707,6 +708,87 @@ header {
     }
 }
 
+// Contact us Style
+.contact-us-section {
+    padding: 145px 0px;
+    .contact-us-holder {
+        padding: 60px 20px;
+        position: relative;
+        margin: 0px auto;
+        max-width: 1470px;
+        border-radius: 2px;
+        border: 6px solid #000;
+        background: #FFF;
+        box-shadow: 21px 21px 0px 0px rgba(0, 0, 0, 0.40);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h2 {
+            color: #000;
+            text-align: center;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+        p {
+            max-width: 1100px;
+            margin: 35px auto 45px;
+            color: #000;
+            text-align: center;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        .contact-us-btn {
+            display: block;
+            @include btn-primary($blue_primary);
+        }
+        .contact-us-element {
+            position: absolute;
+            top: -15%;
+            right: 100px;
+        }
+    }
+}
+
+footer {
+    padding: 35px 0px;
+    background: #000;
+    .footer-holder {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .footer-logo {
+            img {
+                max-width: 200px;
+                height: auto;
+                display: block;
+            }
+        }
+        .footer-content {
+            p {
+                color: #FFF;
+                font-family: "Space Grotesk", sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+            }
+        }
+        .footer-social {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+        }
+    }
+}
+
 // Animation
 @keyframes scroll {
     0% {
@@ -720,14 +802,14 @@ header {
 @keyframes roll {
     0% {
         transform: rotateZ(0deg);
-        left: calc(0% + 185px);
+        left: calc(0% + 60px);
     }
     50% {
         transform: rotateZ(780deg);
-        left: calc(100% - 278px);
+        left: calc(100% - 160px);
     }
     0% {
         transform: rotateZ(0deg);
-        left: calc(0% + 185px);
+        left: calc(0% + 60px);
     }
 }

@@ -44,7 +44,7 @@ body {
 }
 
 .burger-menu-active {
-    display: flex !important;
+    transform: translateY(0px) !important;
 }
 
 // The game
@@ -195,7 +195,7 @@ header {
         z-index: 100;
         position: absolute;
         padding: 45px 5% !important;
-        display: none;
+        display: flex;
         flex-direction: column;
         gap: 20px;
         width: 100%;
@@ -203,7 +203,8 @@ header {
         top:  -45px;
         background-color: #ffffff;
         list-style: none;
-        animation: burger-slide .4s ease-out forwards;
+        transition: .4s ease;
+        transform: translateY(-500px);
         .nav-mobile-title {
             margin-bottom: 20px;
             .title {
@@ -255,9 +256,6 @@ header {
         .header-nav {
             display: none;
         }
-        // .header-nav-mobile {
-        //     display: flex;
-        // }
         .burger-menu-open {
             display: block;
         }
@@ -273,6 +271,16 @@ header {
         .burger-menu {
             padding: 25px 5% !important;
             top: -25px !important;
+            .nav-mobile-title {
+                .title {
+                    .burger-menu-logo {
+                        max-width: 100px;
+                    }
+                    .burger-menu-close {
+                        max-width: 45px;
+                    }
+                }
+            }
         }
         .burger-menu-open {
             max-width: 45px;
@@ -363,7 +371,7 @@ header {
                 font-size: 25px;
             }
             h2 {
-                margin: 32px 0px;
+                margin: 25px 0px 37px;
                 font-size: 16px;
             }
         }
@@ -411,6 +419,12 @@ header {
                     animation: scroll 60s linear infinite;
                 }
             }
+        }
+    }
+
+    @media (max-width: 550px) {
+        .subhero-holder {
+            gap: 30px;
         }
     }
 }
@@ -513,6 +527,121 @@ header {
             .about-btn {
                 margin-left: auto;
                 @include btn-primary($blue_primary);
+            }
+        }
+    }
+    @media (max-width: 1350px) {
+        .about-holder {
+            .about-content {
+                .about-text {
+                    .blue-ball-icon {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 1200px) {
+        .about-holder {
+            .about-header {
+                .number-icon {
+                    max-width: 75px;
+                }
+                h2 {
+                    font-size: 55px;
+                    margin-bottom: -35px;
+                    margin-left: -22px;
+                }
+            }
+            .about-content {
+                margin-top: 80px;
+                gap: 0px;
+                .about-text {
+                    p {
+                        font-size: 33px;
+                        font-weight: 400;
+                    }
+                }
+                .about-qr {
+                    max-width: 100%;
+                    margin: 80px 0px 140px;
+                    justify-content: space-evenly;
+                    gap: 20px;
+                    .qr-code {
+                        max-width: 50%;
+                    }
+                }
+                .about-btn {
+                    margin-left: unset;
+                }
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        .about-holder {
+            .about-content {
+                .about-qr {
+                    .qr-code {
+                        max-width: 40%;
+                    }
+                    h3 {
+                        font-size: 85px;
+                    }
+                    .qr-arrow {
+                        display: none;
+                    }
+                    .qr-circle {
+                        left: -85px;
+                        bottom: -58%;
+                        scale: 0.6;
+                    }
+                }
+                .about-btn {
+                    margin-left: unset;
+                }
+            }
+        }
+    }
+    @media (max-width: 550px) {
+        padding: 50px 0px;
+        .about-holder {
+            .about-header {
+                .number-icon {
+                    max-width: 40px;
+                }
+                h2 {
+                    font-size: 33px;
+                    margin-bottom: -20px;
+                    margin-left: -12px;
+                    &::before {
+                        background-size: contain;
+                    }
+                }
+            }
+            .about-content {
+                margin-top: 60px;
+                .about-text {
+                    p {
+                        font-size: 18px;
+                    }
+                }
+                .about-qr {
+                    margin: 35px 0px 50px;
+                    h3 {
+                        font-size: 50px;
+                    }
+                    .qr-arrow {
+                        display: none;
+                    }
+                    .qr-circle {
+                        left: -285px;
+                        bottom: -155%;
+                        scale: 0.4;
+                    }
+                }
+                .about-btn {
+                    margin-left: unset;
+                }
             }
         }
     }
@@ -1089,14 +1218,5 @@ footer {
     0% {
         transform: rotateZ(0deg);
         left: calc(0% + 60px);
-    }
-}
-
-@keyframes burger-slide {
-    0% {
-        transform: translateY(-500px);
-    }
-    100% {
-        transform: translateY(0px);
     }
 }

@@ -40,7 +40,7 @@ body {
 }
 
 .burger-menu-active {
-  display: flex !important;
+  transform: translateY(0px) !important;
 }
 
 .isPopped {
@@ -113,7 +113,7 @@ header .burger-menu {
   z-index: 100;
   position: absolute;
   padding: 45px 5% !important;
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 20px;
   width: 100%;
@@ -121,7 +121,8 @@ header .burger-menu {
   top: -45px;
   background-color: #ffffff;
   list-style: none;
-  animation: burger-slide 0.4s ease-out forwards;
+  transition: 0.4s ease;
+  transform: translateY(-500px);
 }
 header .burger-menu .nav-mobile-title {
   margin-bottom: 20px;
@@ -193,6 +194,12 @@ header .burger-menu .nav-mobile-icons .icons-holder {
   header .burger-menu {
     padding: 25px 5% !important;
     top: -25px !important;
+  }
+  header .burger-menu .nav-mobile-title .title .burger-menu-logo {
+    max-width: 100px;
+  }
+  header .burger-menu .nav-mobile-title .title .burger-menu-close {
+    max-width: 45px;
   }
   header .burger-menu-open {
     max-width: 45px;
@@ -343,7 +350,7 @@ header .burger-menu .nav-mobile-icons .icons-holder {
     font-size: 25px;
   }
   .hero-section .hero-holder h2 {
-    margin: 32px 0px;
+    margin: 25px 0px 37px;
     font-size: 16px;
   }
   .hero-section .background-elem-1 {
@@ -390,6 +397,11 @@ header .burger-menu .nav-mobile-icons .icons-holder {
     display: block;
     max-width: 100%;
     animation: scroll 60s linear infinite;
+  }
+}
+@media (max-width: 550px) {
+  .subhero-section .subhero-holder {
+    gap: 30px;
   }
 }
 
@@ -540,6 +552,99 @@ header .burger-menu .nav-mobile-icons .icons-holder {
     transform: scale(0.5);
     right: -50px;
     bottom: -45px;
+  }
+}
+@media (max-width: 1350px) {
+  .about-section .about-holder .about-content .about-text .blue-ball-icon {
+    display: none;
+  }
+}
+@media (max-width: 1200px) {
+  .about-section .about-holder .about-header .number-icon {
+    max-width: 75px;
+  }
+  .about-section .about-holder .about-header h2 {
+    font-size: 55px;
+    margin-bottom: -35px;
+    margin-left: -22px;
+  }
+  .about-section .about-holder .about-content {
+    margin-top: 80px;
+    gap: 0px;
+  }
+  .about-section .about-holder .about-content .about-text p {
+    font-size: 33px;
+    font-weight: 400;
+  }
+  .about-section .about-holder .about-content .about-qr {
+    max-width: 100%;
+    margin: 80px 0px 140px;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
+  .about-section .about-holder .about-content .about-qr .qr-code {
+    max-width: 50%;
+  }
+  .about-section .about-holder .about-content .about-btn {
+    margin-left: unset;
+  }
+}
+@media (max-width: 768px) {
+  .about-section .about-holder .about-content .about-qr .qr-code {
+    max-width: 40%;
+  }
+  .about-section .about-holder .about-content .about-qr h3 {
+    font-size: 85px;
+  }
+  .about-section .about-holder .about-content .about-qr .qr-arrow {
+    display: none;
+  }
+  .about-section .about-holder .about-content .about-qr .qr-circle {
+    left: -85px;
+    bottom: -58%;
+    scale: 0.6;
+  }
+  .about-section .about-holder .about-content .about-btn {
+    margin-left: unset;
+  }
+}
+@media (max-width: 550px) {
+  .about-section {
+    padding: 50px 0px;
+  }
+  .about-section .about-holder .about-header .number-icon {
+    max-width: 40px;
+  }
+  .about-section .about-holder .about-header h2 {
+    font-size: 33px;
+    margin-bottom: -20px;
+    margin-left: -12px;
+  }
+  .about-section .about-holder .about-header h2::before {
+    background-size: contain;
+  }
+  .about-section .about-holder .about-content {
+    margin-top: 60px;
+  }
+  .about-section .about-holder .about-content .about-text p {
+    font-size: 18px;
+  }
+  .about-section .about-holder .about-content .about-qr {
+    margin: 35px 0px 50px;
+  }
+  .about-section .about-holder .about-content .about-qr h3 {
+    font-size: 50px;
+  }
+  .about-section .about-holder .about-content .about-qr .qr-arrow {
+    display: none;
+  }
+  .about-section .about-holder .about-content .about-qr .qr-circle {
+    left: -285px;
+    bottom: -155%;
+    scale: 0.4;
+  }
+  .about-section .about-holder .about-content .about-btn {
+    margin-left: unset;
   }
 }
 
@@ -1173,13 +1278,5 @@ footer .footer-holder .footer-social a:hover {
   0% {
     transform: rotateZ(0deg);
     left: calc(0% + 60px);
-  }
-}
-@keyframes burger-slide {
-  0% {
-    transform: translateY(-500px);
-  }
-  100% {
-    transform: translateY(0px);
   }
 }/*# sourceMappingURL=style.css.map */

@@ -739,12 +739,12 @@ header .burger-menu .nav-mobile-icons .icons-holder {
   padding: 6% 7%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 25px;
 }
 .what-we-do-section .what-we-do-holder .what-we-do-content .content-to-change .content-img {
-  flex: 0 0 48%;
+  flex: 0 0 30%;
 }
 .what-we-do-section .what-we-do-holder .what-we-do-content .content-to-change .content-img img {
   border: 3px solid black;

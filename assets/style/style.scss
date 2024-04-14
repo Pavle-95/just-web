@@ -723,11 +723,11 @@ header {
                 padding: 6% 7%;
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
+                justify-content: space-evenly;
                 flex-wrap: wrap;
                 gap: 25px;
                 .content-img {
-                    flex: 0 0 48%;
+                    flex: 0 0 30%;
                     img {
                         border: 3px solid black;
                         display: block;

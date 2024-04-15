@@ -714,6 +714,7 @@ header {
             align-items: center;
             justify-content: center;
             .content-to-change {
+                overflow: hidden;
                 position: relative;
                 max-width: 1500px;
                 background-image: url('../img/what-we-do/what-we-do-content-border.svg');
@@ -727,7 +728,8 @@ header {
                 flex-wrap: wrap;
                 gap: 25px;
                 .content-img {
-                    flex: 0 0 30%;
+                    flex: 0 0 48%;
+                    transition: .3s ease;
                     img {
                         border: 3px solid black;
                         display: block;
@@ -737,6 +739,7 @@ header {
                 }
                 .content-text {
                     flex: 0 0 48%;
+                    transition: .4s ease;
                     h3 {
                         color: #000;
                         font-family: "Space Grotesk", sans-serif;

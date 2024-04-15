@@ -730,6 +730,7 @@ header .burger-menu .nav-mobile-icons .icons-holder {
   justify-content: center;
 }
 .what-we-do-section .what-we-do-holder .what-we-do-content .content-to-change {
+  overflow: hidden;
   position: relative;
   max-width: 1500px;
   background-image: url("../img/what-we-do/what-we-do-content-border.svg");
@@ -744,7 +745,8 @@ header .burger-menu .nav-mobile-icons .icons-holder {
   gap: 25px;
 }
 .what-we-do-section .what-we-do-holder .what-we-do-content .content-to-change .content-img {
-  flex: 0 0 30%;
+  flex: 0 0 48%;
+  transition: 0.3s ease;
 }
 .what-we-do-section .what-we-do-holder .what-we-do-content .content-to-change .content-img img {
   border: 3px solid black;
@@ -754,6 +756,7 @@ header .burger-menu .nav-mobile-icons .icons-holder {
 }
 .what-we-do-section .what-we-do-holder .what-we-do-content .content-to-change .content-text {
   flex: 0 0 48%;
+  transition: 0.4s ease;
 }
 .what-we-do-section .what-we-do-holder .what-we-do-content .content-to-change .content-text h3 {
   color: #000;

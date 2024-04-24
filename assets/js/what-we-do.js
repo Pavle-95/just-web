@@ -7,7 +7,7 @@ const backArrow = document.querySelector('.back-arrow');
 const nextArrow = document.querySelector('.next-arrow');
 
 // Current Index
-
+var data = document.querySelectorAll('.content-text');
 var currentIndex = 0;
 
 // Initial Start of function 
@@ -37,8 +37,6 @@ function backArrowHandler() {
 }
 
 function contentChangeHandler(idx) {
-  // contentImageHolder.innerHTML = data[idx].img;
-  // contentTextHolder.innerHTML = data[idx].content;
   for(let i = 0; i < contentImageHolder.length; i++) {
     if(i < idx) {
         contentImageHolder[i].style.position = "absolute";

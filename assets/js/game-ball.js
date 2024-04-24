@@ -28,7 +28,3 @@ function popTheBall(ball) {
 setTimeout(() => {
   gameStart();
 }, 31000)
-
-console.log(gameBall);
-
-

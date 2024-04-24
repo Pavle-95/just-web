@@ -57,6 +57,26 @@ body {
     display: none;
   }
 }
+.choose-language {
+  margin: 0px auto;
+  padding: 50px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100vh;
+}
+.choose-language h3 {
+  color: #000;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
 header {
   width: 90%;
   max-width: 1320px;

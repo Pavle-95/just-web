@@ -152,6 +152,26 @@ body {
     }
 }
 
+// Chouse Language
+.choose-language {
+    margin: 0px auto;
+    padding: 50px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: fit-content;
+    height: 100vh;
+    h3 {
+        color: #000;
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+}
+
 // Header
 header {
     width: 90%;

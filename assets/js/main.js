@@ -19,7 +19,7 @@ submitButton.addEventListener('click', (event) => {
   // Prikaži loader
   loader.style.display = 'block';
   submitButton.disabled = true; 
-  
+
   // Regex patterns for validation
   const namePattern = /^[a-zA-Z\s]+$/;  // Allows only letters and spaces
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email pattern
@@ -33,7 +33,7 @@ submitButton.addEventListener('click', (event) => {
   // Validate form data
   if (!namePattern.test(fromName.value)) {
     emailResponse.textContent = 'Molimo vas unesite validno ime.';
-    fromName.parentNode.style.borderColor = 'red';
+    fromName.parentNode.style.borderColor = '#FF867E';
     
     // Sakrij loader i omogući dugme
     loader.style.display = 'none';
@@ -47,7 +47,7 @@ submitButton.addEventListener('click', (event) => {
 
   if (!emailPattern.test(replyTo.value)) {
     emailResponse.textContent = 'Molimo vas unesite validnu email adresu.';
-    replyTo.parentNode.style.borderColor = 'red';
+    replyTo.parentNode.style.borderColor = '#FF867E';
     
     // Sakrij loader i omogući dugme
     loader.style.display = 'none';
@@ -61,7 +61,7 @@ submitButton.addEventListener('click', (event) => {
 
   if (!messagePattern.test(message.value)) {
     emailResponse.textContent = 'Molimo vas unesite poruku.';
-    message.parentNode.style.borderColor = 'red';
+    message.parentNode.style.borderColor = '#FF867E';
     
     // Sakrij loader i omogući dugme
     loader.style.display = 'none';
@@ -90,7 +90,11 @@ submitButton.addEventListener('click', (event) => {
   })
   .then(response => {
       if (response.ok) {
-          emailResponse.textContent = 'Vas email je poslat!';
+        fromName.value = '';
+        replyTo.value = '';
+        message.value = '';
+        emailResponse.textContent = 'Vas email je uspesno poslat!';
+        emailResponse.style.color = '#91D1FF';
       } else {
           throw new Error('Oops... Nesto nije uredu.');
       }

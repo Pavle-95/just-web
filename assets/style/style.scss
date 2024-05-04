@@ -549,7 +549,7 @@ header {
                     font-family: "Space Grotesk", sans-serif;
                     font-size: 40px;
                     font-style: normal;
-                    font-weight: 600;
+                    font-weight: 500;
                     line-height: normal;
                     span {
                         position: relative;
@@ -815,12 +815,12 @@ header {
                     filter: drop-shadow(10px 5px 4px $purple_primary);
                 }
             }
-            .purple-ball-icon {
-                position: absolute;
-                top: -70px;
-                left: calc(0% + 60px);
-                animation: roll 10s ease infinite;
-            }
+        }
+        .purple-ball-icon {
+            position: absolute;
+            top: -70px;
+            left: calc(0% + 60px);
+            animation: roll 10s ease infinite;
         }
     }
     @media (max-width: 1500px) {
@@ -1353,6 +1353,7 @@ header {
                     max-width: 75px;
                 }
                 h2 {
+                    overflow: hidden;
                     font-size: 55px;
                     margin-bottom: -35px;
                     margin-left: -22px;
@@ -1477,25 +1478,131 @@ header {
             font-weight: 600;
             line-height: normal;
         }
-        p {
+        .email-response {
             max-width: 1100px;
             margin: 35px auto 45px;
             color: #000;
             text-align: center;
             font-family: "Space Grotesk", sans-serif;
-            font-size: 32px;
+            font-size: 16px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
         }
-        .contact-us-btn {
-            display: block;
-            @include btn-primary($blue_primary);
+        #contact-form {
+            max-width: 1100px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 50px 16px;
+            .name, .email {
+                position: relative;
+                flex: 0 0 48%;
+                border-radius: 4px;
+                border: 3px dashed black;
+                padding: 20px 25px;
+                label {
+                    padding: 5px 15px;
+                    position: absolute;
+                    top: -40%;
+                    background-color: white;
+                    display: block;
+                    color: black;
+                    font-family: "Space Grotesk", sans-serif;
+                    font-size: 26px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                }
+                input {
+                    border: none;
+                    width: 100%;
+                    color: black;
+                    font-family: "Space Grotesk", sans-serif;
+                    font-size: 22px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                }
+            }
+            .message {
+                position: relative;
+                flex: 0 0 100%;
+                border-radius: 4px;
+                border: 3px dashed black;
+                padding: 20px 25px;
+                label {
+                    padding: 5px 15px;
+                    position: absolute;
+                    top: -40%;
+                    background-color: white;
+                    display: block;
+                    color: black;
+                    font-family: "Space Grotesk", sans-serif;
+                    font-size: 26px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                    display: block;
+                }
+                input {
+                    border: none;
+                    width: 100%;
+                    color: black;
+                    font-family: "Space Grotesk", sans-serif;
+                    font-size: 22px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                }
+            }
+            .button-submit {
+                margin: auto;
+                @include btn-primary($blue_primary);
+                #loader {
+                    display: none;
+                    position: absolute;
+                    left: -25%;
+                    animation: rotateLoader 2s infinite linear;
+                }
+            }
         }
         .contact-us-element {
             position: absolute;
             top: -15%;
             right: 100px;
+        }
+    }
+    @media (max-width: 650px) {
+        .contact-us-holder {
+            #contact-form {
+                .name, .email {
+                    flex: 0 0 100%;
+                    label {
+                        font-size: 20px;
+                    }
+                    input {
+                        font-size: 16px;
+                    }
+                }
+                .message {
+                    label {
+                        font-size: 20px;
+                    }
+                    input {
+                        font-size: 16px;
+                    }
+                }
+                .button-submit {
+                    #loader {
+                        top: 4px;
+                        max-width: 45px;
+                        height: auto;
+                    }
+                }
+            }
         }
     }
     @media (max-width: 550px) {
@@ -1660,5 +1767,15 @@ footer {
     0% {
         transform: rotateZ(0deg);
         left: calc(0% + 60px);
+    }
+}
+
+
+@keyframes rotateLoader {
+    from {
+        transform: translateX(-50%) rotate(0deg);
+    }
+    to {
+        transform: translateX(-50%) rotate(360deg);
     }
 }

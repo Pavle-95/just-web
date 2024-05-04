@@ -523,7 +523,7 @@ header .burger-menu .nav-mobile-icons .icons-holder {
   font-family: "Space Grotesk", sans-serif;
   font-size: 40px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   line-height: normal;
 }
 .about-section .about-holder .about-content .about-text p span {
@@ -831,7 +831,7 @@ header .burger-menu .nav-mobile-icons .icons-holder {
   transition: 0.3s ease;
   filter: drop-shadow(10px 5px 4px #C5A1FF);
 }
-.what-we-do-section .what-we-do-holder .what-we-do-content .purple-ball-icon {
+.what-we-do-section .what-we-do-holder .purple-ball-icon {
   position: absolute;
   top: -70px;
   left: calc(0% + 60px);
@@ -1369,6 +1369,7 @@ header .burger-menu .nav-mobile-icons .icons-holder {
     max-width: 75px;
   }
   .clients-section .clients-holder .clients-header h2 {
+    overflow: hidden;
     font-size: 55px;
     margin-bottom: -35px;
     margin-left: -22px;
@@ -1479,22 +1480,92 @@ header .burger-menu .nav-mobile-icons .icons-holder {
   font-weight: 600;
   line-height: normal;
 }
-.contact-us-section .contact-us-holder p {
+.contact-us-section .contact-us-holder .email-response {
   max-width: 1100px;
   margin: 35px auto 45px;
   color: #000;
   text-align: center;
   font-family: "Space Grotesk", sans-serif;
-  font-size: 32px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
-.contact-us-section .contact-us-holder .contact-us-btn {
+.contact-us-section .contact-us-holder #contact-form {
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 50px 16px;
+}
+.contact-us-section .contact-us-holder #contact-form .name, .contact-us-section .contact-us-holder #contact-form .email {
+  position: relative;
+  flex: 0 0 48%;
+  border-radius: 4px;
+  border: 3px dashed black;
+  padding: 20px 25px;
+}
+.contact-us-section .contact-us-holder #contact-form .name label, .contact-us-section .contact-us-holder #contact-form .email label {
+  padding: 5px 15px;
+  position: absolute;
+  top: -40%;
+  background-color: white;
   display: block;
+  color: black;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.contact-us-section .contact-us-holder #contact-form .name input, .contact-us-section .contact-us-holder #contact-form .email input {
+  border: none;
+  width: 100%;
+  color: black;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.contact-us-section .contact-us-holder #contact-form .message {
+  position: relative;
+  flex: 0 0 100%;
+  border-radius: 4px;
+  border: 3px dashed black;
+  padding: 20px 25px;
+}
+.contact-us-section .contact-us-holder #contact-form .message label {
+  padding: 5px 15px;
+  position: absolute;
+  top: -40%;
+  background-color: white;
+  display: block;
+  color: black;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: block;
+}
+.contact-us-section .contact-us-holder #contact-form .message input {
+  border: none;
+  width: 100%;
+  color: black;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.contact-us-section .contact-us-holder #contact-form .button-submit {
+  margin: auto;
   position: relative;
 }
-.contact-us-section .contact-us-holder .contact-us-btn .btn {
+.contact-us-section .contact-us-holder #contact-form .button-submit .btn {
   display: block;
   padding: 30px 55px;
   border-radius: 92px;
@@ -1509,51 +1580,79 @@ header .burger-menu .nav-mobile-icons .icons-holder {
   line-height: normal;
   text-decoration: none;
 }
-.contact-us-section .contact-us-holder .contact-us-btn .icon {
+.contact-us-section .contact-us-holder #contact-form .button-submit .icon {
   position: absolute;
   right: -80px;
   bottom: -40px;
 }
 @media (max-width: 1200px) {
-  .contact-us-section .contact-us-holder .contact-us-btn .btn {
+  .contact-us-section .contact-us-holder #contact-form .button-submit .btn {
     padding: 25px 35px;
     border: 5px solid #000;
     font-size: 22px;
   }
-  .contact-us-section .contact-us-holder .contact-us-btn .icon {
+  .contact-us-section .contact-us-holder #contact-form .button-submit .icon {
     right: -60px;
     bottom: -45px;
     scale: 0.7;
   }
 }
 @media (max-width: 768px) {
-  .contact-us-section .contact-us-holder .contact-us-btn .btn {
+  .contact-us-section .contact-us-holder #contact-form .button-submit .btn {
     padding: 15px 25px;
     border: 4px solid #000;
     font-size: 20px;
   }
-  .contact-us-section .contact-us-holder .contact-us-btn .icon {
+  .contact-us-section .contact-us-holder #contact-form .button-submit .icon {
     transform: scale(0.7);
     right: -60px;
     bottom: -50px;
   }
 }
 @media (max-width: 550px) {
-  .contact-us-section .contact-us-holder .contact-us-btn .btn {
+  .contact-us-section .contact-us-holder #contact-form .button-submit .btn {
     padding: 15px 25px;
     border: 4px solid #000;
     font-size: 16px;
   }
-  .contact-us-section .contact-us-holder .contact-us-btn .icon {
+  .contact-us-section .contact-us-holder #contact-form .button-submit .icon {
     transform: scale(0.5);
     right: -50px;
     bottom: -45px;
   }
 }
+.contact-us-section .contact-us-holder #contact-form .button-submit #loader {
+  display: none;
+  position: absolute;
+  left: -25%;
+  animation: rotateLoader 2s infinite linear;
+}
 .contact-us-section .contact-us-holder .contact-us-element {
   position: absolute;
   top: -15%;
   right: 100px;
+}
+@media (max-width: 650px) {
+  .contact-us-section .contact-us-holder #contact-form .name, .contact-us-section .contact-us-holder #contact-form .email {
+    flex: 0 0 100%;
+  }
+  .contact-us-section .contact-us-holder #contact-form .name label, .contact-us-section .contact-us-holder #contact-form .email label {
+    font-size: 20px;
+  }
+  .contact-us-section .contact-us-holder #contact-form .name input, .contact-us-section .contact-us-holder #contact-form .email input {
+    font-size: 16px;
+  }
+  .contact-us-section .contact-us-holder #contact-form .message label {
+    font-size: 20px;
+  }
+  .contact-us-section .contact-us-holder #contact-form .message input {
+    font-size: 16px;
+  }
+  .contact-us-section .contact-us-holder #contact-form .button-submit #loader {
+    top: 4px;
+    max-width: 45px;
+    height: auto;
+  }
 }
 @media (max-width: 550px) {
   .contact-us-section .contact-us-holder {
@@ -1705,5 +1804,13 @@ footer .footer-holder .footer-social a:hover {
   0% {
     transform: rotateZ(0deg);
     left: calc(0% + 60px);
+  }
+}
+@keyframes rotateLoader {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(360deg);
   }
 }/*# sourceMappingURL=style.css.map */

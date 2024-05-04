@@ -3,6 +3,8 @@ const game = document.querySelector('.game-ball');
 const gameBall = document.querySelectorAll('#game-ball');
 const totalBallsHolder = document.querySelector('.total-balls');
 const poppedBallsHolder = document.querySelector('.poped-balls');
+const contactUsFormModal = document.querySelector('.contact-us-modal')
+
 var poppedDall = 0;
 
 totalBallsHolder.innerText = gameBall.length;
@@ -23,6 +25,12 @@ function popTheBall(ball) {
   ball.classList.add('isPopped');
   poppedDall++;
   poppedBallsHolder.innerText = poppedDall;
+}
+
+function winTHeGame() {
+  // Start the conffetti
+
+  // Open Modal
 }
 
 setTimeout(() => {

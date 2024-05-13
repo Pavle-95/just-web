@@ -746,6 +746,7 @@ header .burger-menu .nav-mobile-icons .icons-holder {
   }
   .about-section .about-holder .about-content .about-text p {
     font-size: 18px;
+    line-height: 25px;
   }
   .about-section .about-holder .about-content .about-qr {
     margin: 35px 0px 50px;

@@ -21,7 +21,6 @@ function nextArrowHandler() {
   else {
     currentIndex = currentIndex + 1;
     contentChangeHandler(currentIndex);
-    console.log('This is the current index: ' + currentIndex);
   }
 }
 
@@ -32,7 +31,6 @@ function backArrowHandler() {
   else {
     currentIndex = currentIndex - 1;
     contentChangeHandler(currentIndex);
-    console.log('This is the current index: ' + currentIndex);
   }
 }
 

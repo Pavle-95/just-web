@@ -2,7 +2,7 @@
 const game = document.querySelector('.game-ball');
 const gameBall = document.querySelectorAll('#game-ball');
 const totalBallsHolder = document.querySelector('.total-balls');
-const poppedBallsHolder = document.querySelector('.poped-balls');
+const poppedBallsHolder = document.querySelector('.popped-balls');
 const contactUsFormModal = document.querySelector('.contact-us-modal')
 
 var poppedBall = 0;
@@ -25,9 +25,6 @@ function popTheBall(ball) {
   ball.classList.add('isPopped');
   poppedBall++;
   poppedBallsHolder.innerText = poppedBall;
-
-  console.log(poppedBall);
-  console.log(gameBall.length);
 
   if(poppedBall === gameBall.length) {
     winTHeGame();

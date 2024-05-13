@@ -200,7 +200,7 @@ header {
     width: 90%;
     max-width: 1320px;
     margin: 0px auto;
-    margin-top: 45px !important;
+    margin-top: 40px !important;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -314,6 +314,20 @@ header {
             }
         }
     }
+    @media (max-width: 1400px) {
+        .header-nav {
+            display: none;
+        }
+        .burger-menu-open {
+            display: block;
+        }
+        .logo-icon {
+            max-width: 30%;
+        }
+        .burger-menu-open {
+            max-width: 15%;
+        }
+    }
     @media (max-width: 1200px) {
         .header-nav {
             display: none;
@@ -400,15 +414,12 @@ header {
         bottom: 20px;
         right: 0px;
     }
-    @media (max-width: 1200px)  {
+    @media (max-width: 1400px)  {
         overflow: hidden;
         .hero-holder {
-            h1 {
-                font-size: 52px;
-            }
+            margin: 5% auto 10%;
             h2 {
-                margin: 42px 0px;
-                font-size: 25px;
+                margin: 40px 0px 30px;
             }
         }
         .background-elem-1 {
@@ -420,6 +431,21 @@ header {
             bottom: -60px;
             transform: scale(.7);
         }
+    }
+    @media (max-width: 1200px)  {
+        overflow: hidden;
+        .hero-holder {
+            h1 {
+                font-size: 52px;
+            }
+            h2 {
+                margin: 40px 0px 30px;
+                font-size: 25px;
+            }
+        }
+        .background-elem-2 {
+            display: none;
+        }    
     }
     @media (max-width: 768px) {
         .background-elem-1 {
@@ -443,10 +469,6 @@ header {
                 font-size: 16px;
             }
         }
-
-        .background-elem-2 {
-            display: none;
-        }    
     }
 }
 
@@ -472,9 +494,13 @@ header {
             }
         }
     }
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
         .subhero-holder {
             padding: 30px 0px;
+            li {
+                max-width: 75px;
+                min-width: 75px;
+            }
         }
     }
     @media (max-width: 768px) {
@@ -503,6 +529,7 @@ header {
 // About Us Section
 .about-section {
     padding: 80px 0px;
+    overflow-x: hidden;
     .about-holder {
         .about-header {
             display: flex;
@@ -550,7 +577,7 @@ header {
                     font-size: 40px;
                     font-style: normal;
                     font-weight: 500;
-                    line-height: normal;
+                    line-height: 43px;
                     span {
                         position: relative;
                         &::before {
@@ -779,7 +806,7 @@ header {
                     flex: 0 0 48%;
                     transition: .3s ease;
                     img {
-                        border: 3px solid black;
+                        // border: 3px solid black;
                         display: block;
                         max-width: 100%;
                         height: auto;
@@ -957,6 +984,7 @@ header {
 // Portfolio Section
 .portfolio-section {
     padding: 80px 0px 90px;
+    overflow-x: hidden;
     .portfolio-holder {
         .portfolio-header {
             display: flex;

@@ -1077,13 +1077,13 @@ header .burger-menu .nav-mobile-icons .icons-holder {
   font-weight: 600;
   line-height: normal;
 }
-.portfolio-section .portfolio-holder .portfolio-card-holder .single-portfolio-card .card-content .content-header a {
+.portfolio-section .portfolio-holder .portfolio-card-holder .single-portfolio-card .card-content .content-header .go-to-arrow {
   padding: 7px;
   background: #000;
   box-shadow: 4px 4px 0px 0px #8E8F87;
   transition: 0.3s ease;
 }
-.portfolio-section .portfolio-holder .portfolio-card-holder .single-portfolio-card .card-content .content-header a:hover {
+.portfolio-section .portfolio-holder .portfolio-card-holder .single-portfolio-card .card-content .content-header .go-to-arrow:hover {
   cursor: pointer;
   box-shadow: 4px 4px 0px 2px rgba(142, 143, 135, 0.7215686275);
 }
@@ -1366,7 +1366,7 @@ header .burger-menu .nav-mobile-icons .icons-holder {
   max-width: 100px;
   max-height: 100px;
 }
-.clients-section .clients-holder .clients-reviews-holder .review-card .review-header h4 {
+.clients-section .clients-holder .clients-reviews-holder .review-card .review-header h5 {
   color: var(--Dark-Gray, #181818);
   font-family: "Space Grotesk", sans-serif;
   font-size: 27px;
@@ -1473,7 +1473,7 @@ header .burger-menu .nav-mobile-icons .icons-holder {
   .clients-section .clients-holder .clients-reviews-holder .review-card .review-header img {
     max-height: 55px;
   }
-  .clients-section .clients-holder .clients-reviews-holder .review-card .review-header h4 {
+  .clients-section .clients-holder .clients-reviews-holder .review-card .review-header h5 {
     width: 100%;
     line-height: unset;
     font-size: 18px;

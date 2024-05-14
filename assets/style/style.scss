@@ -1083,7 +1083,7 @@ header {
                             font-weight: 600;
                             line-height: normal;
                         }
-                        a {
+                        .go-to-arrow {
                             padding: 7px;
                             background: #000;
                             box-shadow: 4px 4px 0px 0px #8E8F87;
@@ -1344,7 +1344,7 @@ header {
                         max-width: 100px;
                         max-height: 100px;
                     }
-                    h4 {
+                    h5 {
                         color: var(--Dark-Gray, #181818);
                         font-family: "Space Grotesk", sans-serif;
                         font-size: 27px;
@@ -1465,7 +1465,7 @@ header {
                         img {
                             max-height: 55px;
                         }
-                        h4 {
+                        h5 {
                             width: 100%;
                             line-height: unset;
                             font-size: 18px;

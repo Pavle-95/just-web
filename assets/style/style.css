@@ -555,6 +555,7 @@ header .burger-menu .nav-mobile-icons .icons-holder {
   font-style: normal;
   font-weight: 500;
   line-height: 43px;
+  margin-bottom: 16px;
 }
 .about-section .about-holder .about-content .about-text p span {
   position: relative;
@@ -576,7 +577,7 @@ header .burger-menu .nav-mobile-icons .icons-holder {
 .about-section .about-holder .about-content .about-qr {
   margin: 100px 0px;
   position: relative;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: flex-start;
   gap: 100px;
@@ -605,6 +606,7 @@ header .burger-menu .nav-mobile-icons .icons-holder {
   scale: 0.9;
 }
 .about-section .about-holder .about-content .about-btn {
+  margin-top: 120px;
   margin-left: auto;
   position: relative;
 }
@@ -683,6 +685,7 @@ header .burger-menu .nav-mobile-icons .icons-holder {
   .about-section .about-holder .about-content .about-text p {
     font-size: 33px;
     font-weight: 400;
+    margin-bottom: 12px;
   }
   .about-section .about-holder .about-content .about-qr {
     max-width: 100%;
@@ -749,6 +752,7 @@ header .burger-menu .nav-mobile-icons .icons-holder {
     line-height: 25px;
   }
   .about-section .about-holder .about-content .about-qr {
+    display: flex;
     margin: 35px 0px 50px;
   }
   .about-section .about-holder .about-content .about-qr h3 {
@@ -763,6 +767,7 @@ header .burger-menu .nav-mobile-icons .icons-holder {
     scale: 0.4;
   }
   .about-section .about-holder .about-content .about-btn {
+    margin-top: 0px;
     margin-left: unset;
   }
 }

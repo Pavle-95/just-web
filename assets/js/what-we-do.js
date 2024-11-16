@@ -39,8 +39,8 @@ function contentChangeHandler(idx) {
     if(i < idx) {
         contentImageHolder[i].style.position = "absolute";
         contentTextHolder[i].style.position = "absolute";
-        contentImageHolder[i].style.transform = "translateX(-2000px)";
-        contentTextHolder[i].style.transform = "translateX(-2000px)";
+        contentImageHolder[i].style.transform = "translateX(-3000px)";
+        contentTextHolder[i].style.transform = "translateX(-3000px)";
     } else if(i === idx) {
         contentImageHolder[i].style.position = "relative";
         contentTextHolder[i].style.position = "relative";
@@ -49,7 +49,7 @@ function contentChangeHandler(idx) {
       } else {
         contentImageHolder[i].style.position = "absolute";
         contentTextHolder[i].style.position = "absolute";
-        contentImageHolder[i].style.transform = "translateX(2000px)";
+        contentImageHolder[i].style.transform = "translateX(3000px)";
         contentTextHolder[i].style.transform = "translateX(3000px)";
       }
 }

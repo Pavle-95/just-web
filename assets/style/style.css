@@ -124,7 +124,7 @@ header .header-nav {
   list-style: none;
   border-radius: 6px;
   border: 3px solid #000;
-  padding: 25px 32px;
+  padding: 0px 24px;
 }
 header .header-nav .nav-link {
   position: relative;
@@ -137,6 +137,14 @@ header .header-nav .nav-link .link {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
+header .header-nav .nav-link .link img {
+  top: 2px;
+  position: relative;
+  max-width: 68px;
+}
+header .header-nav .nav-link .link .serbia-flag {
+  top: 3px;
 }
 header .header-nav .nav-link .link::before {
   z-index: -1;
@@ -224,12 +232,6 @@ header .burger-menu .nav-mobile-icons .icons-holder {
   width: 100%;
 }
 @media (max-width: 1400px) {
-  header .header-nav {
-    display: none;
-  }
-  header .burger-menu-open {
-    display: block;
-  }
   header .logo-icon {
     max-width: 30%;
   }
@@ -774,6 +776,7 @@ header .burger-menu .nav-mobile-icons .icons-holder {
 
 .what-we-do-section {
   padding: 80px 0px;
+  overflow: hidden;
 }
 .what-we-do-section .what-we-do-holder .what-we-do-header {
   display: flex;
@@ -812,21 +815,41 @@ header .burger-menu .nav-mobile-icons .icons-holder {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 15px;
 }
 .what-we-do-section .what-we-do-holder .what-we-do-content .content-to-change {
-  overflow: hidden;
+  padding: 32px 54px;
   position: relative;
   max-width: 1500px;
-  background-image: url("../img/what-we-do/what-we-do-content-border.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  padding: 6% 7%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 25px;
+}
+.what-we-do-section .what-we-do-holder .what-we-do-content .content-to-change .top-border {
+  max-width: calc(100% + 30px);
+  position: absolute;
+  left: -7px;
+  top: 0px;
+}
+.what-we-do-section .what-we-do-holder .what-we-do-content .content-to-change .bottom-border {
+  max-width: calc(100% + 30px);
+  position: absolute;
+  left: -17px;
+  bottom: 0px;
+}
+.what-we-do-section .what-we-do-holder .what-we-do-content .content-to-change .left-border {
+  max-height: calc(100% + 20px);
+  position: absolute;
+  left: 0px;
+  top: -7px;
+}
+.what-we-do-section .what-we-do-holder .what-we-do-content .content-to-change .right-border {
+  max-height: calc(100% + 20px);
+  position: absolute;
+  right: 0px;
+  top: -17px;
 }
 .what-we-do-section .what-we-do-holder .what-we-do-content .content-to-change .content-img {
   flex: 0 0 48%;
@@ -868,7 +891,7 @@ header .burger-menu .nav-mobile-icons .icons-holder {
 }
 .what-we-do-section .what-we-do-holder .purple-ball-icon {
   position: absolute;
-  top: -70px;
+  top: -92px;
   left: calc(0% + 60px);
   animation: roll 10s ease infinite;
 }
@@ -916,10 +939,6 @@ header .burger-menu .nav-mobile-icons .icons-holder {
     justify-content: space-evenly;
   }
   .what-we-do-section .what-we-do-holder .what-we-do-content .content-to-change {
-    padding: 10% 7%;
-    background-image: url("../img/what-we-do/border-upright.svg");
-    flex-wrap: wrap;
-    justify-content: center;
     gap: 30px;
   }
   .what-we-do-section .what-we-do-holder .what-we-do-content .content-img {
@@ -944,12 +963,6 @@ header .burger-menu .nav-mobile-icons .icons-holder {
     order: 3;
   }
 }
-@media (max-width: 768px) {
-  .what-we-do-section .what-we-do-holder .what-we-do-content .content-to-change {
-    padding: 17% 6%;
-    background-image: url("../img/what-we-do/border-upright-768.svg");
-  }
-}
 @media (max-width: 550px) {
   .what-we-do-section .what-we-do-holder .what-we-do-header .number-icon {
     max-width: 40px;
@@ -964,8 +977,7 @@ header .burger-menu .nav-mobile-icons .icons-holder {
     margin-top: 60px;
   }
   .what-we-do-section .what-we-do-holder .what-we-do-content .content-to-change {
-    padding: 0%;
-    background-image: unset;
+    padding: 25px 22px;
   }
   .what-we-do-section .what-we-do-holder .what-we-do-content .content-to-change .content-img {
     flex: 0 0 80%;
@@ -1062,11 +1074,13 @@ header .burger-menu .nav-mobile-icons .icons-holder {
 .portfolio-section .portfolio-holder .portfolio-card-holder .single-portfolio-card .card-img {
   display: block;
   max-width: 100%;
+  height: 230px;
 }
 .portfolio-section .portfolio-holder .portfolio-card-holder .single-portfolio-card .card-img img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
   border: 3px solid black;
 }
 .portfolio-section .portfolio-holder .portfolio-card-holder .single-portfolio-card .card-content .content-header {
@@ -1247,7 +1261,7 @@ header .burger-menu .nav-mobile-icons .icons-holder {
     padding: 30px 0px 60px;
   }
   .portfolio-section .portfolio-holder .portfolio-card-holder .single-portfolio-card {
-    padding: 30px 45px;
+    padding: 30px 35px;
     min-width: 350px;
     max-width: 350px;
     min-height: 334px;
@@ -1256,6 +1270,9 @@ header .burger-menu .nav-mobile-icons .icons-holder {
     width: 350px;
     height: 350px;
     background-image: url("../img/portfolio/border-mobile.svg");
+  }
+  .portfolio-section .portfolio-holder .portfolio-card-holder .single-portfolio-card .card-img {
+    height: 150px;
   }
   .portfolio-section .portfolio-holder .portfolio-card-holder .single-portfolio-card .card-content .content-header h4 {
     font-size: 23px;

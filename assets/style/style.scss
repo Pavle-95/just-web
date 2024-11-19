@@ -1003,6 +1003,11 @@ header {
                             font-size: 18px;
                         }
                     }
+                    .right-border, .left-border {
+                        path {
+                            stroke-width: 3.5px;
+                        }
+                    }
                 }
             }
         }
@@ -1166,7 +1171,7 @@ header {
         }  
         .portfolio-btn-holder {
             max-width: 1500px;
-            margin: 40px auto;
+            margin: 40px auto 0px;
             .portfolio-btn {
                 width: fit-content;
                 display: block;
@@ -1667,6 +1672,7 @@ header {
         }
     }
     @media (max-width: 550px) {
+        padding: 60px 0px 40px;
         .contact-us-holder {
             border: 4px solid #000;
             padding: 40px 20px;
@@ -1797,7 +1803,7 @@ footer {
     }
     @media (max-width: 550px) {
         .footer-holder {
-
+            gap: 25px;
             .footer-logo {
                 max-width: 30%;
                 img {
